@@ -6,7 +6,7 @@ class RoomList extends React.Component{
     /*sorts function asc by rooms id*/
     const orderedRooms = [...this.props.rooms].sort((a,b)=> a.id - b.id)
     return(
-      <div className="rooms-list">
+      <div className="room-list">
         <ul>
           <h3>Your rooms:</h3>
           {orderedRooms.map(room =>{
