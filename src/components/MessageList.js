@@ -7,6 +7,7 @@ class MessageList extends React.Component{
   //prevent form auto scroll to the bottom
   componentWillUpdate(){
     const node = ReactDOM.findDOMNode(this)
+    //if you are near the bottom and type a message it will auto scroll
     this.shouldScrollToBottom = node.scrollTop + node.clientHeight +100   >= node.scrollHeight
   }
 

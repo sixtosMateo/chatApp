@@ -84,7 +84,7 @@ class App extends Component {
     .then(room =>{
       //this sets the state of subscribe room id
       this.setState({
-        roomId:roomId,
+        roomId: room.id,
       })
 
       //Retrive updated rooms from joinable to joined
@@ -105,7 +105,7 @@ class App extends Component {
         name
     })
     // once you create a room you can subscribe to room by its id
-    .then(room => this.subscribeToRoom(room.Id))
+    .then(room => this.subscribeToRoom(room.id))
     .catch(err=> console.log("err creating a room ", err))
 
   }

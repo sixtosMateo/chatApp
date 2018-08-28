@@ -9,10 +9,10 @@ class RoomList extends React.Component{
       <div className="rooms-list">
         <ul>
           <h3>Your rooms:</h3>
-          {orderedRooms.map(room=>{
+          {orderedRooms.map(room =>{
 
             /*this looks for list of rooms compared with state id*/
-            const active =  this.props.roomId === room.id ? "active": "";
+            const active = room.id === this.props.roomId ? "active": "";
 
             return (
               /*concats the room with boolean active for css style*/
@@ -22,13 +22,13 @@ class RoomList extends React.Component{
                   /*user clicks room triggers app's subscribeToRoom base on the room id that was click inverse work flow*/
                     onClick={() => this.props.subscribeToRoom(room.id)}
                     href="#">
-                    #{room.name}
+                    # {room.name}
                   </a>
 
-               </li>)
-             })
-          }
-        </ ul>
+               </li>
+             )
+             })}
+        </ul>
       </div>
     )
   }
