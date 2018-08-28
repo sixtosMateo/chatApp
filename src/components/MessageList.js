@@ -26,7 +26,16 @@ class MessageList extends React.Component{
   // prop allows this components to view data from root component
   // we are sending data prop to Message component to render as its component
   render(){
-
+    /*if the user has not join the chat room it will show this message*/
+    if(!this.props.roomId){
+      return(
+        <div className="message-list">
+          <div className="join-room">
+            &larr; Join Room!
+          </div>
+        </div>
+      )
+    }
     return (
         <div className="message-list">
           {this.props.messages.map((message, index)=> {

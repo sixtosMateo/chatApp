@@ -36,11 +36,13 @@ class SendMessageForm extends React.Component{
   //we are controlling the value of input field programmatically so it can only be
   //whatever we have in the state at any given time
   render(){
-
+    /*this disabled come from parent component to check if the user has join*/
+    /*if it didnt then user cannot send a message till user joins*/
     return(
       <form onSubmit={this.handleSubmit}
       className="send-message-form">
       <input
+          disabled={this.props.disabled}
           onChange={this.handleChange }
           value={this.state.message}
           placeholder="Type Message and Hit Enter"

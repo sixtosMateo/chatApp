@@ -114,16 +114,20 @@ class App extends Component {
   // everytime data from state changes for specific component it re -renders
   // when we pass data to component it converts to props since its not private
   render() {
-
+    /*state.id is to verify if user has join the room chat*/
+    /*sends the state room id to highlight the click room*/
     return (
       <div className="app">
         <RoomList
-          /*sends the state room id to highlight the click room*/
           roomId={this.state.roomId}
           subscribeToRoom={this.subscribeToRoom}
           rooms={[...this.state.joinableRooms, ...this.state.joinedRooms]}/>
-        <MessageList messages={this.state.messages}/>
-        <SendMessageForm sendMessage={this.sendMessage}/>
+        <MessageList
+          roomId={this.state.roomId}
+          messages={this.state.messages}/>
+        <SendMessageForm
+        disabled={!this.state.roomId}
+        sendMessage={this.sendMessage}/>
         <NewRoomForm createRoom={this.createRoom}/>
       </div>
     );
