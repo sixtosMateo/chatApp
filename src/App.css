@@ -10,7 +10,11 @@
 
 .app {
   display: grid;
-  height: 100%;
+  margin-left:auto;
+  margin-right:auto;
+  border-style: dotted;
+  width: 85%;
+
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 60px;
   /* this grid is visual representation that we just made */
@@ -33,10 +37,11 @@
   padding: 0 5px;
   background-color: var(--secondary-color);
   color: var(--main-text-color);
+  height: 100%;
 }
 
 .new-room-form form{
-  height:60%;
+  height:100%;
   display: flex;
   justify-content: space-between;
 
@@ -83,6 +88,11 @@
 }
 .send-message-form{
   grid-area: f;
+}
+.send-message-form input{
+height: 90%;
+width: 99%;
+border-style:ridge;
 }
 
 .App-logo {
