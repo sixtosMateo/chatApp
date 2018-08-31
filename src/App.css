@@ -10,10 +10,7 @@
 
 .app {
   display: grid;
-  margin-left:auto;
-  margin-right:auto;
-  border-style: dotted;
-  width: 85%;
+  width: 100%;
 
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 60px;
@@ -38,6 +35,7 @@
   background-color: var(--secondary-color);
   color: var(--main-text-color);
   height: 100%;
+  width: 90%;
 }
 
 .new-room-form form{
@@ -86,13 +84,21 @@
 .message-list{
   grid-area: m;
 }
+
+.message-list .join-room{
+  margin-top: 50%;
+  text-align: center;
+}
+
 .send-message-form{
   grid-area: f;
+  width: 99%;
+
 }
 .send-message-form input{
-height: 90%;
-width: 99%;
-border-style:ridge;
+  height: 90%;
+  width: 99%;
+
 }
 
 .App-logo {
